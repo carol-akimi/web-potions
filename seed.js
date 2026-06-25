@@ -5,32 +5,46 @@ const Potion = require('./models/potion');
 // administrador.
 const examplePotions = [
   {
-    name: 'Elixir da Vida Eterna',
+    name: 'Poção Blue Sky',
     description:
-      'Um destilado dourado que restaura o vigor e afasta os males do tempo. Use com moderação.',
-    price: 149.9,
-    image: 'https://images.unsplash.com/photo-1596424197152-be9c75df4d6a?w=600&q=80',
+      'Essa poção provê um surto de inspiração por 24 horas. Foi utilizada por John Lennon quando escreveu Lucy in the Sky with Diamonds.',
+    price: 300,
+    image: 'https://i.ibb.co/ZzS7xb2/rsz-sky.png',
   },
   {
-    name: 'Poção do Sono Profundo',
+    name: 'Poção do Perfume Misterioso',
     description:
-      'Vapores de lavanda e luar engarrafados. Garante uma noite de descanso sem pesadelos.',
-    price: 59.5,
-    image: 'https://images.unsplash.com/photo-1603569283847-aa295f0d016a?w=600&q=80',
+      ' Essa poção faz com que você fique cheirando lilás e groselha por 24 dias. Essência muito admirada pelos bruxos.',
+    price: 200,
+    image: 'https://i.ibb.co/pyhZJXf/rsz-lilas.png',
   },
   {
-    name: 'Tônico da Coragem',
+    name: 'Poção de Pinus',
     description:
-      'Fervido com raiz de dragão e pimenta-fantasma. Aquece o peito e dissolve o medo.',
-    price: 89.0,
-    image: 'https://images.unsplash.com/photo-1612817288484-6f916006741a?w=600&q=80',
+      'Essa poção faz com que você fique 10 cm mais alto! Observação: efeitos colaterais desconhecidos.',
+    price: 3000,
+    image: 'https://i.ibb.co/DkzdL1q/rsz-pinus.png',
   },
   {
-    name: 'Néctar da Invisibilidade',
+    name: 'Poção da Beleza Eterna',
     description:
-      'Translúcido como orvalho. Some da vista por alguns minutos — efeito varia com a lua.',
-    price: 210.0,
-    image: 'https://images.unsplash.com/photo-1578652520385-c05f6f3b1f3c?w=600&q=80',
+      'Veneno que mata rápido',
+    price: 100,
+    image: 'https://i.ibb.co/9p872NK/rsz-1beleza.png',
+  },
+  {
+    name: 'Poção do Arco Íro',
+    description:
+      'Traz felicidade momentânea. Pode durar de 10 minutos a 2 dias.',
+    price: 120,
+    image: 'https://i.ibb.co/PrC09MP/rsz-2unicornio.png',
+  },
+  {
+    name: 'Caldeirão das Verdades Secretas',
+    description:
+      'As pessoas lhe dirão apenas verdades por 1 hora. É necessário beber os 5L.',
+    price: 150,
+    image: 'https://i.ibb.co/s9Lyvj8/rsz-verdades.png',
   },
 ];
 

@@ -4,10 +4,8 @@
   const status = document.getElementById('produtos-status');
 
   function formatarPreco(valor) {
-    return Number(valor).toLocaleString('pt-BR', {
-      style: 'currency',
-      currency: 'BRL',
-    });
+    // Os valores das poções são expressos em "moedas" (conforme o enunciado).
+    return Number(valor).toLocaleString('pt-BR') + ' moedas';
   }
 
   function montarCard(potion) {
@@ -29,7 +27,7 @@
     card.querySelector('.preco').textContent = formatarPreco(potion.price);
 
     card.querySelector('.btn-comprar').addEventListener('click', function () {
-      alert(`"${potion.name}" adicionada ao seu caldeirão! (compra ainda não implementada)`);
+      alert(`"${potion.name}" adicionada ao seu caldeirão!`);
     });
 
     return card;

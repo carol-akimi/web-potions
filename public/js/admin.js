@@ -63,10 +63,8 @@
   }
 
   function formatarPreco(valor) {
-    return Number(valor).toLocaleString('pt-BR', {
-      style: 'currency',
-      currency: 'BRL',
-    });
+    // Os valores das poções são expressos em "moedas" (conforme o enunciado).
+    return Number(valor).toLocaleString('pt-BR') + ' moedas';
   }
 
   // ---- Login ----
