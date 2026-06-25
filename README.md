@@ -36,6 +36,10 @@ Acesse:
 - Site: `http://localhost:3000/`
 - Admin: `http://localhost:3000/admin.html`
 
+## Acesse o admin
+- Usuário: admin
+- Senha: utilizar senha cadastrada anteriormente
+
 ## Observações
 
 - O banco é **em memória**: ao reiniciar o servidor, as poções cadastradas são
