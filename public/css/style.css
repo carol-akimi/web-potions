@@ -1,0 +1,351 @@
+:root {
+  --roxo-escuro: #1a0d2e;
+  --roxo-fundo: #241140;
+  --roxo: #4b2a78;
+  --roxo-claro: #7c4dcc;
+  --laranja: #ff8c2b;
+  --laranja-escuro: #d96a16;
+  --texto: #f3eaff;
+  --texto-suave: #c9b8e8;
+  --sombra: rgba(0, 0, 0, 0.45);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background: var(--roxo-escuro);
+  color: var(--texto);
+  line-height: 1.6;
+}
+
+a {
+  color: var(--laranja);
+  text-decoration: none;
+}
+
+/* ===== Índice fixo (canto superior direito) ===== */
+.indice {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 100;
+  background: rgba(36, 17, 64, 0.92);
+  border: 1px solid var(--roxo);
+  border-radius: 10px;
+  padding: 0.6rem 0.9rem;
+  box-shadow: 0 6px 18px var(--sombra);
+  backdrop-filter: blur(4px);
+}
+
+.indice ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.indice a {
+  color: var(--texto-suave);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  transition: color 0.2s;
+}
+
+.indice a:hover {
+  color: var(--laranja);
+}
+
+/* ===== Cabeçalho / Hero ===== */
+.hero {
+  text-align: center;
+  padding: 5rem 1rem 4rem;
+  background: radial-gradient(circle at 50% 0%, var(--roxo) 0%, var(--roxo-escuro) 70%);
+  border-bottom: 3px solid var(--laranja);
+}
+
+.hero h1 {
+  font-size: 3rem;
+  letter-spacing: 0.08em;
+  color: var(--laranja);
+  text-shadow: 0 2px 12px var(--sombra);
+}
+
+.hero p {
+  color: var(--texto-suave);
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+/* ===== Seções ===== */
+section {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 3.5rem 1.5rem;
+  scroll-margin-top: 1rem;
+}
+
+section h2 {
+  font-size: 2rem;
+  color: var(--laranja);
+  margin-bottom: 1rem;
+  border-left: 4px solid var(--laranja);
+  padding-left: 0.75rem;
+}
+
+.descricao p {
+  font-size: 1.1rem;
+  color: var(--texto-suave);
+  max-width: 760px;
+}
+
+/* ===== Histórico ===== */
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.galeria img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid var(--roxo);
+  box-shadow: 0 4px 12px var(--sombra);
+}
+
+/* ===== Produtos ===== */
+.produtos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.card {
+  background: var(--roxo-fundo);
+  border: 1px solid var(--roxo);
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 6px 16px var(--sombra);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 22px var(--sombra);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  background: var(--roxo);
+}
+
+.card-corpo {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.card-corpo h3 {
+  color: var(--texto);
+  font-size: 1.25rem;
+  margin-bottom: 0.4rem;
+}
+
+.card-corpo .descricao-produto {
+  color: var(--texto-suave);
+  font-size: 0.95rem;
+  flex: 1;
+}
+
+.card-corpo .preco {
+  color: var(--laranja);
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 0.8rem 0;
+}
+
+/* ===== Botões ===== */
+.btn {
+  display: inline-block;
+  background: var(--laranja);
+  color: #2a1500;
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 1.1rem;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn:hover {
+  background: var(--laranja-escuro);
+}
+
+.btn-perigo {
+  background: #b3322f;
+  color: #fff;
+}
+
+.btn-perigo:hover {
+  background: #8f2624;
+}
+
+/* ===== Rodapé ===== */
+footer {
+  background: var(--roxo-fundo);
+  border-top: 3px solid var(--laranja);
+  color: var(--texto-suave);
+  text-align: center;
+  padding: 2.5rem 1.5rem;
+  margin-top: 2rem;
+}
+
+footer h3 {
+  color: var(--laranja);
+  margin-bottom: 0.5rem;
+}
+
+/* ===== Admin ===== */
+.admin-main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+}
+
+.painel-login {
+  max-width: 380px;
+  margin: 4rem auto;
+  background: var(--roxo-fundo);
+  border: 1px solid var(--roxo);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 6px 16px var(--sombra);
+}
+
+.form-campo {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.form-campo label {
+  margin-bottom: 0.3rem;
+  color: var(--texto-suave);
+  font-weight: 600;
+}
+
+.form-campo input,
+.form-campo textarea {
+  background: var(--roxo-escuro);
+  border: 1px solid var(--roxo);
+  border-radius: 8px;
+  color: var(--texto);
+  padding: 0.6rem 0.75rem;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.form-campo textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.aviso {
+  padding: 0.7rem 0.9rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.aviso-erro {
+  background: rgba(179, 50, 47, 0.2);
+  border: 1px solid #b3322f;
+  color: #ffb3b1;
+}
+
+.aviso-ok {
+  background: rgba(124, 77, 204, 0.2);
+  border: 1px solid var(--roxo-claro);
+  color: var(--texto);
+}
+
+.escondido {
+  display: none;
+}
+
+.admin-topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.lista-admin {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.item-admin {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: var(--roxo-fundo);
+  border: 1px solid var(--roxo);
+  border-radius: 10px;
+  padding: 0.75rem;
+}
+
+.item-admin img {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  border-radius: 8px;
+  background: var(--roxo);
+}
+
+.item-admin .info {
+  flex: 1;
+}
+
+.item-admin .info strong {
+  color: var(--texto);
+}
+
+.item-admin .info span {
+  color: var(--laranja);
+  font-weight: 700;
+}
+
+.bloco {
+  background: var(--roxo-fundo);
+  border: 1px solid var(--roxo);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.bloco h2 {
+  font-size: 1.4rem;
+  color: var(--laranja);
+  margin-bottom: 1rem;
+}

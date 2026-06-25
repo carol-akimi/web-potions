@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Administrador — Botica das Sombras</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <nav class="indice" aria-label="Índice">
+      <ul>
+        <li><a href="/index.html#descricao">Descrição</a></li>
+        <li><a href="/index.html#historico">Histórico</a></li>
+        <li><a href="/index.html#produtos">Produtos</a></li>
+        <li><a href="/admin.html">Administrador</a></li>
+      </ul>
+    </nav>
+
+    <header class="hero">
+      <h1>Painel do Administrador</h1>
+      <p>Gerencie o catálogo de poções</p>
+    </header>
+
+    <main class="admin-main">
+      <!-- Tela de login -->
+      <section id="login-view" class="painel-login">
+        <h2 style="color: var(--laranja); margin-bottom: 1rem">Entrar</h2>
+        <div id="login-aviso" class="aviso aviso-erro escondido"></div>
+        <form id="login-form">
+          <div class="form-campo">
+            <label for="login-usuario">Usuário</label>
+            <input type="text" id="login-usuario" autocomplete="username" required />
+          </div>
+          <div class="form-campo">
+            <label for="login-senha">Senha</label>
+            <input type="password" id="login-senha" autocomplete="current-password" required />
+          </div>
+          <button type="submit" class="btn">Entrar</button>
+        </form>
+      </section>
+
+      <!-- Painel (após login) -->
+      <section id="painel-view" class="escondido">
+        <div class="admin-topo">
+          <span id="sessao-info" class="descricao-produto"></span>
+          <button id="btn-sair" class="btn btn-perigo">Sair</button>
+        </div>
+
+        <div id="painel-aviso" class="aviso escondido"></div>
+
+        <div class="bloco">
+          <h2>Cadastrar poção</h2>
+          <form id="cadastro-form">
+            <div class="form-campo">
+              <label for="campo-nome">Nome</label>
+              <input type="text" id="campo-nome" required />
+            </div>
+            <div class="form-campo">
+              <label for="campo-descricao">Descrição</label>
+              <textarea id="campo-descricao" required></textarea>
+            </div>
+            <div class="form-campo">
+              <label for="campo-preco">Preço (R$)</label>
+              <input type="number" id="campo-preco" step="0.01" min="0" required />
+            </div>
+            <div class="form-campo">
+              <label for="campo-imagem">Imagem (caminho ou URL)</label>
+              <input type="text" id="campo-imagem" placeholder="https://… ou /img/pocao.png" required />
+            </div>
+            <button type="submit" class="btn">Cadastrar</button>
+          </form>
+        </div>
+
+        <div class="bloco">
+          <h2>Poções cadastradas</h2>
+          <ul id="lista-admin" class="lista-admin"></ul>
+        </div>
+      </section>
+    </main>
+
+    <script src="/js/admin.js"></script>
+  </body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Botica das Sombras — Poções desde 1867</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <!-- Índice fixo no canto superior direito -->
+    <nav class="indice" aria-label="Índice">
+      <ul>
+        <li><a href="#descricao">Descrição</a></li>
+        <li><a href="#historico">Histórico</a></li>
+        <li><a href="#produtos">Produtos</a></li>
+        <li><a href="/admin.html">Administrador</a></li>
+      </ul>
+    </nav>
+
+    <header class="hero">
+      <h1>Botica das Sombras</h1>
+      <p>Poções artesanais e elixires raros desde 1867</p>
+    </header>
+
+    <main>
+      <!-- Descrição da loja -->
+      <section id="descricao" class="descricao">
+        <h2>A Loja</h2>
+        <p>
+          Escondida entre vielas de pedra, a Botica das Sombras é uma loja de
+          poções dedicada à arte ancestral da alquimia. Cada frasco é preparado
+          à mão, com ingredientes colhidos sob luares específicos e receitas
+          guardadas por gerações. Aqui você encontra desde tônicos do dia a dia
+          até elixires de poder excepcional — sempre com a procedência e o
+          cuidado que só uma casa centenária pode oferecer.
+        </p>
+      </section>
+
+      <!-- Histórico da loja -->
+      <section id="historico">
+        <h2>Nossa História</h2>
+        <p class="descricao-produto">
+          Fundada em <strong>1867</strong> pela alquimista Eleonora Vance, a
+          Botica começou como uma pequena tenda de remédios e curiosidades.
+          Atravessou três séculos preservando seus livros de receitas originais
+          e o caldeirão de cobre que ainda hoje borbulha em nossa cozinha.
+        </p>
+        <div class="galeria">
+          <img
+            src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=600&q=80"
+            alt="Prateleiras antigas com livros e frascos"
+          />
+          <img
+            src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=600&q=80"
+            alt="Livros antigos de receitas"
+          />
+          <img
+            src="https://images.unsplash.com/photo-1519682337058-a94d519337bc?w=600&q=80"
+            alt="Frascos e ingredientes sobre a bancada"
+          />
+        </div>
+      </section>
+
+      <!-- Produtos disponíveis (carregados via AJAX) -->
+      <section id="produtos">
+        <h2>Poções Disponíveis</h2>
+        <div id="produtos-grid" class="produtos-grid">
+          <p id="produtos-status" class="descricao-produto">Carregando poções…</p>
+        </div>
+      </section>
+    </main>
+
+    <!-- Rodapé com informações de contato -->
+    <footer id="contato">
+      <h3>Contato</h3>
+      <p>Rua das Mandrágoras, 1867 — Bairro do Crepúsculo</p>
+      <p>Telefone: (11) 4002-8667 &nbsp;•&nbsp; E-mail: contato@boticadassombras.com</p>
+      <p>Aberto de terça a domingo, do pôr ao nascer do sol.</p>
+    </footer>
+
+    <script src="/js/products.js"></script>
+  </body>
+</html>
