@@ -32,7 +32,7 @@ npm run dev    # desenvolvimento, com reload automático (nodemon)
 npm start      # produção
 ```
 ### Observação
-Caso seu sistema operacional seja um Linux muito antigo, pode acontecer o problema a seeguir.
+Caso seu sistema operacional seja um Linux muito antigo, pode acontecer o problema a seguir:
 O `sqlite3` pode reclamar de versão do GLIBC ao iniciar, se for o caso, recompile o binário nativo para a sua máquina:
 ```bash
 npm rebuild sqlite3 --build-from-source
